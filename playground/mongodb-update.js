@@ -28,13 +28,12 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
             name: 'Mika',
         },
         $inc: {
-            age: 1,
+            age: 1, // Lisää ikään yhden vuoden, vähennys olisi -1.
         }
     }, {
         returnOriginal: false
     }).then((result) => {
         console.log(result);
     })
-
     // db.close();
 });
